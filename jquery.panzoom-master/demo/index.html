@@ -41,91 +41,49 @@
     <script src="../test/libs/jquery.mousewheel.js"></script>
   </head>
   <body>
-    <section>
-	<div class="buttons">
-	  <h4>zoom buttons voor afbeelding</h4>
-        <button class="zoom-out">Zoom Out</button>
-        <button class="zoom-in">Zoom In</button>
-        <input type="range" class="zoom-range">
-        <button class="reset">Reset</button>
-	<!--	<h4>zoom buttons voor tekst</h4>
-		<button class="zoom-out-tekst">Zoom Out</button>
-        <button class="zoom-in-tekst">Zoom In</button>
-        <input type="range" class="zoom-range-tekst">
-        <button class="reset-tekst">Reset</button>-->
-      </div>
-      <h1>Zoom</h1>
-	  <div class="demo-controls">
-            <a class="btn btn-primary" id="prev">Prev</a>
-            <a class="btn btn-primary" id="next">Next</a>
-          </div>
-		  
+  <section id="zoom">	
+  <h1>Zoom en Swipe</h1>
       <div id="mySwipe" class="swipe">
         <div class="swipe-wrap">
 		<div><img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900"></div>
 		<div><img src="http://www.w3schools.com/css/img_fjords.jpg" width="900" height="900"></div>
 		<div><img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900"></div>
+		<div><img src="http://www.w3schools.com/css/img_fjords.jpg" width="900" height="900"></div>
 		</div>
-		<div><img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900"></div>
-		
-		<!--<div class="tekstzoom">
-		<p>deze tekst zoomt ook</p>
-		</div>-->
       </div>
-      
+	  </section>
+	  <section id="buttons">
+      <div class="buttons">
+	  <button class="zoom-out" id="zoom-out">Zoom Out</button>
+        <button class="zoom-in" id="zoom-in">Zoom In</button>
+        <input type="range" class="zoom-range" id="zoom-range">
+        <button class="reset" id="reset">Reset</button>
+	  <div class="demo-controls">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+          </div>
+		</div>	
+		</section>
 <script>
 (function() {
-          var $section = $('section').first();
-          $section.find('.swipe').panzoom({
-            $zoomIn: $section.find(".zoom-in"),
-            $zoomOut: $section.find(".zoom-out"),
-            $zoomRange: $section.find(".zoom-range"),
-            $reset: $section.find(".reset"),
+          $('*').find('#mySwipe').panzoom({
+            $zoomIn: $('*').find(".zoom-in"),
+            $zoomOut: $('*').find(".zoom-out"),
+            $zoomRange: $('*').find(".zoom-range"),
+            $reset: $('*').find(".reset"),
 			disablePan:true,
-			
           });
         })();
       </script>
-<!--	 <script>
-	  (function() {
-          var $section = $('section').first();
-          var $panzoom = $section.find('.swipe-wrap').panzoom();
-		  $('#focal').find('.swipe-wrap').panzoom("reset");
-          $panzoom.parent().on('mousewheel.focal', function( e ) {
-            e.preventDefault();
-            var delta = e.delta || e.originalEvent.wheelDelta;
-            var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
-            $panzoom.panzoom('zoom', zoomOut, {
-              animate: false,
-              focal: e,
-			  contain:true,			  
-            });
-          });
-        })();
-      </script>-->
-<!--	  <script>
-	    (function() {
-          var $section = $('section').first();
-          $section.find('.tekstzoom').panzoom({
-            $zoomIn: $section.find(".zoom-in-tekst"),
-            $zoomOut: $section.find(".zoom-out-tekst"),
-            $zoomRange: $section.find(".zoom-range-tekst"),
-            $reset: $section.find(".reset-tekst"),
-			panOnlyWhenZoomed: true,
-			minScale: 1
-          });
-        })();
-		</script>-->
     </section>
-   <!-- Load livereload if not phantom or github -->
     <script>
       if ( !window.phantom && !/github/.test(window.location.hostname) ) document.write('<scr' + 'ipt src="http://' + location.hostname + ':35711/livereload.js"></scr' + 'ipt>');
     </script>
-<!--	<main>
+<main>
       <article class="container">
         <section id="demo">
           <h2>Swipe</h2>
-          <div id="mySwipe" class="swipe">
+          <div id="swipe" class="swipe">
             <div class="swipe-wrap">
               <div><img src="https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/leisa_christmas_false_color.png?itok=Jxf0IlS4"/></div>
               <div><img src="http://www.w3schools.com/css/img_fjords.jpg"/></div>
@@ -135,16 +93,15 @@
               <div><b>5</b></div>
           </div>
           <div class="demo-controls">
-            <a class="btn btn-primary" id="prev">Prev</a>
-            <a class="btn btn-primary" id="next">Next</a>
+            <a class="btn btn-primary" id="previous">Prev</a>
+            <a class="btn btn-primary" id="next1">Next</a>
           </div>
         </section>
-    </main>-->
+    </main>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="swipe.js"></script>
 	<script src="panzoom.js"></script>
     <script>
-// pure JS
 var element = document.getElementById('mySwipe'),
     prevBtn = document.getElementById('prev'),
     nextBtn = document.getElementById('next');
@@ -163,7 +120,26 @@ window.mySwipe = new Swipe(element, {
 prevBtn.onclick = mySwipe.prev;
 nextBtn.onclick = mySwipe.next;
     </script>
-<!--	<section id="focal">
+<script>
+var element = document.getElementById('swipe'),
+    prevBtn = document.getElementById('previous'),
+    nextBtn = document.getElementById('next1');
+
+window.mySwipe = new Swipe(element, {
+  startSlide: 0,
+  auto: 0,
+  draggable: true,
+  autoRestart: false,
+  continuous: true,
+  disableScroll: true,
+  stopPropagation: true,
+  callback: function(index, element) {},
+  transitionEnd: function(index, element) {}
+});
+prevBtn.onclick = mySwipe.prev;
+nextBtn.onclick = mySwipe.next;
+    </script>
+<section id="focal">
       <h1>Zoomen met muiswiel</h1>
       <div class="parent">
         <div class="panzoom">
@@ -185,6 +161,6 @@ nextBtn.onclick = mySwipe.next;
           });
         })();
       </script>
-</section>-->
+</section>
   </body>
 </html>
