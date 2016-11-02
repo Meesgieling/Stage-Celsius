@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Swipe en zoom demo</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="vendor/highlightjs/github-gist.css">
+    <script src="vendor/highlightjs/highlight.pack.js"></script>
+    <style>
+      /* Swipe 2 required styles */
+
+      .swipe {
+        overflow: hidden;
+        visibility: hidden;
+        position: relative;
+      }
+      .swipe-wrap {
+        overflow: hidden;
+        position: relative;
+      }
+      .swipe-wrap > div {
+        float: left;
+        width: 100%;
+        position: relative;
+      }
+
+      /* END required styles */
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      body { background: #F5FCFF; color: #333666; }
+      section { text-align: center; margin: 50px 0; }
+      .panzoom-parent { border: 2px solid #333; }
+      .panzoom-parent .panzoom { border: 2px dashed #666; }
+      .buttons { margin: 40px 0 0; }
+    </style>
+    <script src="../test/libs/jquery.js"></script>
+    <script src="../dist/jquery.panzoom.js"></script>
+    <script src="../test/libs/jquery.mousewheel.js"></script>
+  </head>
+  <body>
+    <section>
+      <h1>Zoom</h1>
+      <div class="parent">
+        <div class="panzoom">
+          <img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900">
+        </div>
+		<div class="tekstzoom">
+		<p>deze tekst zoomt ook</p>
+		</div>
+      </div>
+      <div class="buttons">
+	  <h4>zoom buttons voor afbeelding</h4>
+        <button class="zoom-out">Zoom Out</button>
+        <button class="zoom-in">Zoom In</button>
+        <input type="range" class="zoom-range">
+        <button class="reset">Reset</button>
+		<h4>zoom buttons voor tekst</h4>
+		<button class="zoom-out-tekst">Zoom Out</button>
+        <button class="zoom-in-tekst">Zoom In</button>
+        <input type="range" class="zoom-range-tekst">
+        <button class="reset-tekst">Reset</button>
+      </div>
+      <script>
+        (function() {
+          var $section = $('section').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
+          });
+        })();
+      </script>
+	  <script>
+	    (function() {
+          var $section = $('section').first();
+          $section.find('.tekstzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in-tekst"),
+            $zoomOut: $section.find(".zoom-out-tekst"),
+            $zoomRange: $section.find(".zoom-range-tekst"),
+            $reset: $section.find(".reset-tekst")
+          });
+        })();
+		</script>
+    </section>
+   <!-- Load livereload if not phantom or github -->
+    <script>
+      if ( !window.phantom && !/github/.test(window.location.hostname) ) document.write('<scr' + 'ipt src="http://' + location.hostname + ':35711/livereload.js"></scr' + 'ipt>');
+    </script>
+	<main>
+      <article class="container">
+        <section id="demo">
+          <h2>Swipe</h2>
+          <div id="mySwipe" class="swipe">
+            <div class="swipe-wrap">
+              <div><img src="https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/leisa_christmas_false_color.png?itok=Jxf0IlS4"/></div>
+              <div><img src="http://www.w3schools.com/css/img_fjords.jpg"/></div>
+              <div><img src="http://i.dailymail.co.uk/i/pix/2016/03/08/22/006F877400000258-3482989-image-a-10_1457476109735.jpg"/></div>
+              <div><img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg"/></div>
+              <div><p>tekst</p></div>
+              <div><b>5</b></div>
+          </div>
+          <div class="demo-controls">
+            <a class="btn btn-primary" id="prev">Prev</a>
+            <a class="btn btn-primary" id="next">Next</a>
+          </div>
+        </section>
+    </main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="swipe.js"></script>
+	<script src="panzoom.js"></script>
+    <script>
+// pure JS
+var element = document.getElementById('mySwipe'),
+    prevBtn = document.getElementById('prev'),
+    nextBtn = document.getElementById('next');
+
+window.mySwipe = new Swipe(element, {
+  startSlide: 0,
+  auto: 0,
+  draggable: true,
+  autoRestart: false,
+  continuous: true,
+  disableScroll: true,
+  stopPropagation: true,
+  callback: function(index, element) {},
+  transitionEnd: function(index, element) {}
+});
+
+// using jQuery
+// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+
+prevBtn.onclick = mySwipe.prev;
+nextBtn.onclick = mySwipe.next;
+    </script>
+	<section id="focal">
+      <h1>Zoomen met muiswiel</h1>
+      <div class="parent">
+        <div class="panzoom">
+          <img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900">
+        </div>
+      </div>
+      <script>
+        (function() {
+          var $section = $('#focal');
+          var $panzoom = $section.find('.panzoom').panzoom();
+          $panzoom.parent().on('mousewheel.focal', function( e ) {
+            e.preventDefault();
+            var delta = e.delta || e.originalEvent.wheelDelta;
+            var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+            $panzoom.panzoom('zoom', zoomOut, {
+              animate: false,
+              focal: e
+            });
+          });
+        })();
+      </script>
+</section>
+  </body>
+</html>
