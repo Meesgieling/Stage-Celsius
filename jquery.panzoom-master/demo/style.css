@@ -152,6 +152,7 @@ footer {
 img{
 	height: 400px;
 	width: 400px;
+	position:relative;
 }
 p{
 	font-size:30px;
