@@ -2,36 +2,26 @@ body{
 	background-color: #ccf0ff;
 }
 #installatie{
-	width:auto;
-	height:auto;
 	background-color: green;
 	float: left;
 	border-radius: 4px;
 }
 #alarmen{
-	width:auto;
-	height:auto;
 	background-color: red;
 	float: left;
 	border-radius: 4px;
 }
 #trend{
-	width:auto;
-	height:auto;
 	background-color: blue;
 	float: left;
 	border-radius: 4px;
 }
 #systeem{
-	width:auto;
-	height:auto;
 	background-color: #e6e600;
 	float: left;
 	border-radius: 4px;
 }
 #documentatie{
-	width:auto;
-	height:auto;
 	background-color: purple;
 	float: left;
 	border-radius: 4px;
@@ -48,4 +38,15 @@ body{
 }
 ul{
 	list-style-type: none;
+}
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+	.button{width: 100%;}
+	.button{height:50%;}
+}
+@media only screen and (min-width: 768px) {
+	.button{width: 100%;}
+	.button{height:50%;}
 }
