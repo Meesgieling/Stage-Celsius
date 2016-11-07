@@ -5,26 +5,37 @@ body{
 	background-color: green;
 	float: left;
 	border-radius: 4px;
+	height:300px;
 }
 #alarmen{
 	background-color: red;
 	float: left;
 	border-radius: 4px;
+	height:300px;
 }
 #trend{
 	background-color: blue;
 	float: left;
 	border-radius: 4px;
+	height:300px;
 }
 #systeem{
 	background-color: #e6e600;
 	float: left;
 	border-radius: 4px;
+	height:300px;
 }
 #documentatie{
 	background-color: purple;
 	float: left;
 	border-radius: 4px;
+	height:300px;
+}
+#back{
+	float: left;
+	border-radius: 10%;
+	height:100px;
+	background-color: #000099;
 }
 .button{
 	margin: 4px 2px;
@@ -39,14 +50,9 @@ body{
 ul{
 	list-style-type: none;
 }
-[class*="col-"] {
-    width: 100%;
-}
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 768px) {
 	.button{width: 100%;}
-	.button{height:50%;}
 }
 @media only screen and (min-width: 768px) {
-	.button{width: 100%;}
-	.button{height:50%;}
+	.button{width: 300px;}
 }
