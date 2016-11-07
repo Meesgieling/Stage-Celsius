@@ -29,7 +29,6 @@ body{
 #back{
 	float: left;
 	border-radius: 10%;
-	height:100px;
 	background-color: #000099;
 }
 .button{
@@ -41,17 +40,9 @@ body{
     display: inline-block;
 	cursor: pointer;
 	font-size: 25px;
+	width:100%;
+	height:300px;
 }
 ul{
 	list-style-type: none;
-}
-/*smartphones*/ 
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), 
-    only screen and (max-width: 736px){
-	.button{width: 100%;}
-	.button{height: 500px;}
-}
-@media only screen and (min-width: 736px) {
-	.button{width: 300px;}
-	.button{height: 300px;}
 }
