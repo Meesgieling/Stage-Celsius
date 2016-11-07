@@ -46,11 +46,13 @@ ul{
 	list-style-type: none;
 }
 /*smartphones*/ 
-@media only screen and (min-width: 320px) and (max-width: 736px) {
+@media only screen and (min-width: 375px) 
+  and (max-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
 	.button{width: 100%;}
 	.button{height: 500px;}
 }
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 736px) {
 	.button{width: 300px;}
 	.button{height: 300px;}
 }
