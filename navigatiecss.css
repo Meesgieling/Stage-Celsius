@@ -1,0 +1,51 @@
+body{
+	background-color: #ccf0ff;
+}
+#installatie{
+	width:300px;
+	height:300px;
+	background-color: green;
+	float: left;
+	border-radius: 4px;
+}
+#alarmen{
+	width:300px;
+	height:300px;
+	background-color: red;
+	float: left;
+	border-radius: 4px;
+}
+#trend{
+	width:300px;
+	height:300px;
+	background-color: blue;
+	float: left;
+	border-radius: 4px;
+}
+#systeem{
+	width:300px;
+	height:300px;
+	background-color: #e6e600;
+	float: left;
+	border-radius: 4px;
+}
+#documentatie{
+	width:300px;
+	height:300px;
+	background-color: purple;
+	float: left;
+	border-radius: 4px;
+}
+.button{
+	margin: 4px 2px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	cursor: pointer;
+	font-size: 25px;
+}
+ul{
+	list-style-type: none;
+}
