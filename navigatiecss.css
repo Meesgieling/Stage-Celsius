@@ -5,31 +5,26 @@ body{
 	background-color: green;
 	float: left;
 	border-radius: 4px;
-	height:300px;
 }
 #alarmen{
 	background-color: red;
 	float: left;
 	border-radius: 4px;
-	height:300px;
 }
 #trend{
 	background-color: blue;
 	float: left;
 	border-radius: 4px;
-	height:300px;
 }
 #systeem{
 	background-color: #e6e600;
 	float: left;
 	border-radius: 4px;
-	height:300px;
 }
 #documentatie{
 	background-color: purple;
 	float: left;
 	border-radius: 4px;
-	height:300px;
 }
 #back{
 	float: left;
@@ -50,9 +45,12 @@ body{
 ul{
 	list-style-type: none;
 }
-@media only screen and (max-width: 768px) {
+/*smartphones*/ 
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
 	.button{width: 100%;}
+	.button{height: 500px;}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 740px) {
 	.button{width: 300px;}
+	.button{height: 300px;}
 }
