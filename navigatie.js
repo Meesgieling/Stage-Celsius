@@ -1,18 +1,17 @@
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+function adjustStyle(width) {
+  width = parseInt(width);
+  if (width < 701) {
+    $("#size-stylesheet").attr("href", "css/navigatiecss.css");
+  } else if (width < 900) {
+    $("#size-stylesheet").attr("href", "css/navigatiecss.css");
+  } else {
+     $("#size-stylesheet").attr("href", "css/desktop.css"); 
   }
 }
+
+$(function() {
+  adjustStyle($(this).width());
+  $(window).resize(function() {
+    adjustStyle($(this).width());
+  });
+});
