@@ -1,8 +1,18 @@
-$(document).ready(function() {
-		$('.installatie-nav').hide(); //Hide children by default
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-$('.nav').children().click(function(){
-    $(this).children('.installatie-nav').slideToggle('slow');     
-}).children('.installatie-nav').click(function (event) {
-    event.stopPropagation();
-});
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
