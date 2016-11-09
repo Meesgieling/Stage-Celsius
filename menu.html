@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>Menu Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="desktop.css"/>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="w3.css">
+</head>
+<body>
+<div class="w3-row">
+<button id="installatie" class="button_1" type="button">Installatie</button>
+<button id="alarmen" class="button_1" type="button">Alarmen</button>
+<button id="trend" class="button_1" type="button">Trend</button>
+<button id="systeem" class="button_1" type="button">Systeem</button>
+<button id="documentatie" class="button_1" type="button">Documentatie</button>
+
+<button id="wko" class="button_2" type="button" style="display: none">WKO</button>
+<button id="warmte" class="button_2" type="button" style="display: none">Warmte</button>
+<button id="lucht" class="button_2" type="button" style="display: none">Lucht</button>
+<button id="signaleringen" class="button_2" type="button" style="display: none">Algemene signaleringen</button>
+</div>
+<script>
+$("#installatie").click(function() {
+  $("#wko").toggle("slow");
+  $("#warmte").toggle("slow");
+  $("#lucht").toggle("slow");
+  $("#signaleringen").toggle("slow");
+  $("#alarmen").toggle("slow");
+  $("#trend").toggle("slow");
+  $("#systeem").toggle("slow");
+  $("#documentatie").toggle("slow");
+});
+</script>
+</body>
+</html>

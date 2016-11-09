@@ -19,7 +19,10 @@ body{
 #back{
 	background-color: #000099;
 }
-.button{
+.button_2{
+	background-color: #00008b;
+}
+.button_1, .button_2{
 	margin: 4px 2px;
     color: white;
     padding: 15px 32px;
@@ -33,12 +36,12 @@ body{
 	font-family:Tahoma;
 }
 @media screen and (min-width: 1024px){
-.button{
+.button_1, .button_2{
 	height:300px;
 }
 }
 @media screen and (max-device-width: 640px){
-.button{
+.button_1, .button_2{
 	height:100px;
 }
 }
