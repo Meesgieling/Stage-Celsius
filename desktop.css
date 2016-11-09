@@ -31,17 +31,18 @@ body{
     display: inline-block;
 	cursor: pointer;
 	font-size: 25px;
-	width:100%;
 	border-radius: 7%;
 	font-family:Tahoma;
 }
 @media screen and (min-width: 1024px){
 .button_1, .button_2{
 	height:300px;
+	width:25%;
 }
 }
 @media screen and (max-device-width: 640px){
 .button_1, .button_2{
 	height:100px;
+	width:100%;
 }
 }
