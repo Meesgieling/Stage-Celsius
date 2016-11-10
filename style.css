@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
     content: '';
     display: block;
-    width: 1.5em;
+    width: 100px;
     height: 2px;
     margin: 0.2em 0;
     background-color: currentColor; }
@@ -51,7 +51,8 @@ h2 {
   font-size: 3em; }
 
 h3 {
-  font-size: 1.4em; }
+  font-size: 1.4em;  
+  text-align:center; }
 
 h4 {
   font-size: 1.15em; }
@@ -217,3 +218,7 @@ input[type=range]::-ms-thumb {
 input[type=range]::-ms-track {
 	border-width: 1px;
 	border-color: #222;
+}
+.parent{
+	height:700px;
+}
