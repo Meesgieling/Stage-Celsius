@@ -101,17 +101,6 @@
           </div>
 		</div>	
 		</section>
-<script>
-(function() {
-          $('*').find('#mySwipe').panzoom({
-            $zoomIn: $('*').find("#zoom-in"),
-            $zoomOut: $('*').find("#zoom-out"),
-            $zoomRange: $('*').find(".zoom-range"),
-            $reset: $('*').find("#reset"),
-			disablePan:true,
-          });
-        })();
-      </script>
     </section>
     <script>
       if ( !window.phantom && !/github/.test(window.location.hostname) ) document.write('<scr' + 'ipt src="http://' + location.hostname + ':35711/livereload.js"></scr' + 'ipt>');
@@ -139,7 +128,18 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="swipe.js"></script>
 	<script src="panzoom.js"></script>
-    <script>
+	<script>
+(function() {
+          $('*').find('#mySwipe').panzoom({
+            $zoomIn: $('*').find("#zoom-in"),
+            $zoomOut: $('*').find("#zoom-out"),
+            $zoomRange: $('*').find(".zoom-range"),
+            $reset: $('*').find("#reset"),
+			disablePan:true,
+          });
+        })();
+      </script>
+	<script>
 var element = document.getElementById('mySwipe'),
     prevBtn = document.getElementById('prev'),
     nextBtn = document.getElementById('next');
