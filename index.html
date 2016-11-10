@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <link href="style.css" rel="stylesheet"/>
+	<link href="sandbox.css" rel="stylesheet">
+	<link href="drawer.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="vendor/highlightjs/github-gist.css">
     <script src="vendor/highlightjs/highlight.pack.js"></script>
@@ -23,10 +25,13 @@
         width: 100%;
         position: relative;
       }
+	  .drawer-menu-item{
+	  color:#222;
+	  }
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
-      body { background: #F5FCFF; color: #333666; }
+      body { color: #333666; }
       section { text-align: center; margin: 50px 0; }
       .swipe-wrap-swipe { border: 2px solid #333; }
       .swipe-wrap-swipe .swipe-wrap { border: 2px dashed #666; }
@@ -36,9 +41,44 @@
     <script src="jquery.panzoom.js"></script>
     <script src="jquery.mousewheel.js"></script>
   </head>
-  <body>
-  	<a href="https://github.com/Meesgieling/Meesgieling.github.io" target="_blank">Github link</a>  
-  <h1>Zoom en Swipe</h1>
+  <body class="drawer drawer--left">
+  <a href="https://github.com/Meesgieling/Meesgieling.github.io" target="_blank" style="float:right; padding:10px;">Github link</a>  
+	<h1>Zoom en Swipe</h1>
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+	  <li><a class="drawer-brand">Navigatie menu</a></li>
+        <li><a class="drawer-menu-item" href="#zoom">Zoom en Swipe</a></li>
+          <li><a class="drawer-menu-item" href="#demo">Swipe</a></li>
+          <li><a class="drawer-menu-item" href="#focal">Zoomen met muiswiel</a></li>
+        <li class="drawer-dropdown">
+          <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Dropdown <span class="drawer-caret"></span>
+          </a>
+          <ul class="drawer-dropdown-menu">
+            <li><a class="drawer-dropdown-menu-item" href="#zoom">Zoom en Swipe</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="#demo">Swipe</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="#focal">Zoomen met muiswiel</a></li>
+          </ul>
+        </li>
+        <li class="drawer-dropdown">
+          <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Dropdown 2 <span class="drawer-caret"></span>
+          </a>
+          <ul class="drawer-dropdown-menu">
+            <li><a class="drawer-dropdown-menu-item" href="#zoom">Zoom en Swipe</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="#demo">Swipe</a></li>
+            <li><a class="drawer-dropdown-menu-item" href="#focal">Zoomen met muiswiel</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <section id="zoom">
       <div id="mySwipe" class="swipe">
         <div class="swipe-wrap">
@@ -51,23 +91,23 @@
 	  </section>
 	  <section id="buttons">
       <div class="buttons">
-	  <button class="zoom-out" id="zoom-out">Zoom Out</button>
-        <button class="zoom-in" id="zoom-in">Zoom In</button>
-        <input type="range" class="zoom-range" id="zoom-range">
-        <button class="reset" id="reset">Reset</button>
+		<a class="btn btn-primary" id="zoom-out">Zoom Out</a>
+		<a class="btn btn-primary" id="zoom-in">Zoom In</a>
+		<input type="range" class="zoom-range" id="zoom-range">
+		<a class="btn btn-primary" id="reset">Reset</a>
 	  <div class="demo-controls">
-            <button id="prev">Prev</button>
-            <button id="next">Next</button>
+			<a class="btn btn-primary" id="prev">Prev</a>
+            <a class="btn btn-primary" id="next">Next</a>
           </div>
 		</div>	
 		</section>
 <script>
 (function() {
           $('*').find('#mySwipe').panzoom({
-            $zoomIn: $('*').find(".zoom-in"),
-            $zoomOut: $('*').find(".zoom-out"),
+            $zoomIn: $('*').find("#zoom-in"),
+            $zoomOut: $('*').find("#zoom-out"),
             $zoomRange: $('*').find(".zoom-range"),
-            $reset: $('*').find(".reset"),
+            $reset: $('*').find("#reset"),
 			disablePan:true,
           });
         })();
@@ -93,6 +133,7 @@
             <a class="btn btn-primary" id="previous">Prev</a>
             <a class="btn btn-primary" id="next1">Next</a>
           </div>
+		  </div>
         </section>
     </main>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -159,5 +200,14 @@ nextBtn.onclick = mySwipe.next;
         })();
       </script>
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+  <script src="https://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.5/dropdown.min.js"></script>
+  <script src="drawer.min.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
   </body>
 </html>
