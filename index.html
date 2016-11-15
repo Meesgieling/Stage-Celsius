@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <link href="style.css" rel="stylesheet"/>
+	<link href="style-tooltip.css" rel="stylesheet"/>
 	<link href="sandbox.css" rel="stylesheet">
 	<link href="drawer.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
@@ -81,7 +82,12 @@
     </nav>
   </header>
   <section id="zoom">
+  <div style="max-width:500px; position:relative; margin:auto;">
+      <div class="help-tip">
+		<p>These images can be swiped left and right and can be zoomed in and out.</p>
+	</div>
   <h3>Zoom en Swipe</h3>
+  </div>
   <div>
       <div id="mySwipe" class="swipe" style="width:630px; margin:auto;">
         <div class="swipe-wrap">
@@ -108,7 +114,12 @@
       if ( !window.phantom && !/github/.test(window.location.hostname) ) document.write('<scr' + 'ipt src="http://' + location.hostname + ':35711/livereload.js"></scr' + 'ipt>');
     </script>
 <main>
+<div style="max-width:500px; position:relative; margin:auto;">
+      <div class="help-tip">
+  <p>These images can be swiped left and right.</p>
+  </div>
 <h3>Swipe</h3>
+</div>
       <article class="container">
         <section id="demo">
           <div id="swipe" class="swipe">
@@ -180,7 +191,12 @@ prevBtn.onclick = mySwipe.prev;
 nextBtn.onclick = mySwipe.next;
     </script>
 <section id="focal">
+<div style="max-width:500px; position:relative; margin:auto;">
+      <div class="help-tip">
+  <p>This image can be zoomed in and out with touch or with using the mousewheel.</p>
+  </div>
       <h3>Zoomen met muiswiel</h3>
+</div>
       <div class="parent">
         <div class="panzoom">
           <img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900">
