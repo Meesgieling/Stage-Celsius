@@ -15,8 +15,8 @@
 
 .help-tip{
 	position: absolute;
-	top: 8px;
-	right: 18px;
+	top: 0px;
+	right: 0px;
 	text-align: center;
 	background-color: #BCDBEA;
 	border-radius: 50%;
@@ -25,7 +25,7 @@
 	font-size: 14px;
 	line-height: 26px;
 	cursor: default;
-	z-index:9999;
+	z-index:2;
 }
 
 .help-tip:before{
