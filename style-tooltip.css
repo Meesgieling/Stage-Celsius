@@ -18,7 +18,7 @@
 	top: 0px;
 	right: 0px;
 	text-align: center;
-	background-color: #BCDBEA;
+	background-color: #4da6ff;
 	border-radius: 50%;
 	width: 24px;
 	height: 24px;
@@ -46,7 +46,7 @@
 .help-tip p{
 	display: none;
 	text-align: left;
-	background-color: #1E2021;
+	background-color: #3d4143;
 	padding: 20px;
 	width: 300px;
 	position: absolute;
@@ -64,7 +64,7 @@
 	width:0;
 	height: 0;
 	border:6px solid transparent;
-	border-bottom-color:#1E2021;
+	border-bottom-color:#3d4143;
 	right:10px;
 	top:-12px;
 }
