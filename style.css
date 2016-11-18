@@ -13,7 +13,9 @@
   width: 100%;
   position: relative;
   overflow: hidden; }
-
+.drawer, .drawer-nav{
+	background-color:#e6f7ff;
+  }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
   margin: 0;
   padding: 0;
@@ -22,7 +24,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, 
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background-color: transparent; }
+  background-color: #e6f7ff; }
 
 article > section > * + * {
   margin: 1.5em 0; }
@@ -126,7 +128,7 @@ body {
   color: #111; }
 
 a {
-  color: #EE3769;
+  color: white;
   text-align:center;  
 }
 
@@ -159,12 +161,12 @@ h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
   background-color: #27AAE1; }
 
 footer {
-  border-top: 1px solid #f2f2f2; }
+  border-top: 1px solid black; }
 img{
 	height: 400px;
 	width: 400px;
 }
-p{
+#slidertext{
 	font-size:30px;
 	text-align: center;
 	background-color: red;
@@ -221,4 +223,7 @@ input[type=range]::-ms-track {
 }
 .parent{
 	height:700px;
+}
+p{
+	float:left;
 }
