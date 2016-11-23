@@ -18,44 +18,11 @@
       <script src="jquery.popup.min.js"></script>
       <script src="jquery.panzoom.js"></script>
       <script src="jquery.mousewheel.js"></script>
-      <style>
-         .swipe {
-         overflow: hidden;
-         visibility: hidden;
-         position: relative;
-         }
-         .swipe-wrap {
-         overflow: hidden;
-         position: relative;
-         }
-         .swipe-wrap > div {
-         float: left;
-         width: 100%;
-         position: relative;
-         }
-         .drawer-menu-item{
-         color:#222;
-         }
-      </style>
+	  <script src="scripts.js"></script>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <style type="text/css">
-         body { color: #333666; }
          section { text-align: center; margin: 50px 0; }
-         .swipe-wrap-swipe { border: 2px solid #333; }
-         .swipe-wrap-swipe .swipe-wrap { border: 2px dashed #666; }
-         .buttons { margin: 40px 0 0; }
       </style>
-      <script>
-         $(function(){
-         		$('.default_popup').popup({
-         			content		: '<p>Button</p><button>Press me</button><br><p>Textfield</p><input type="text" name="textfield" placeholder="textfield"><br><p>Range slider</p><input type="range" class="zoom-range" id="zoom-range"><br><p>Color picker</p><input type="color" name="favcolor"><br><p>Submit button</p><input type="submit" value="Submit"><br><p>Radiobutton</p><input type="radio" name="radio" value="Radiobutton"><br><p>Chechbox</p><input type="checkbox" name="checkbox" value="checkbox"><br>',
-         			type		: 'html',
-         			width		: 400,
-         			height		: 150
-         		});
-         		});
-         		
-      </script>
    </head>
    <body class="drawer drawer--left">
       <h1>Demo page for plugins</h1>
@@ -151,58 +118,6 @@
             </div>
          </section>
       </main>
-      <script>
-         (function() {
-                   $('*').find('#mySwipe').panzoom({
-                     $zoomIn: $('*').find("#zoom-in"),
-                     $zoomOut: $('*').find("#zoom-out"),
-                     $zoomRange: $('*').find("#zoom-range"),
-                     $reset: $('*').find("#reset"),
-         			disablePan:true,
-                   });
-                 })();
-               
-      </script>
-      <script>
-         var element = document.getElementById('mySwipe'),
-             prevBtn = document.getElementById('prev'),
-             nextBtn = document.getElementById('next');
-         
-         window.mySwipe = new Swipe(element, {
-           startSlide: 0,
-           auto: 0,
-           draggable: true,
-           autoRestart: false,
-           continuous: true,
-           disableScroll: true,
-           stopPropagation: true,
-           callback: function(index, element) {},
-           transitionEnd: function(index, element) {}
-         });
-         prevBtn.onclick = mySwipe.prev;
-         nextBtn.onclick = mySwipe.next;
-             
-      </script>
-      <script>
-         var element = document.getElementById('swipe'),
-             prevBtn = document.getElementById('previous'),
-             nextBtn = document.getElementById('next1');
-         
-         window.mySwipe = new Swipe(element, {
-           startSlide: 0,
-           auto: 0,
-           draggable: true,
-           autoRestart: false,
-           continuous: true,
-           disableScroll: true,
-           stopPropagation: true,
-           callback: function(index, element) {},
-           transitionEnd: function(index, element) {}
-         });
-         prevBtn.onclick = mySwipe.prev;
-         nextBtn.onclick = mySwipe.next;
-             
-      </script>
       <section id="focal">
          <div style="max-width:300px; position:relative; margin:auto;">
             <div class="help-tip">
@@ -215,29 +130,9 @@
                <img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900">
             </div>
          </div>
-         <script>
-            (function() {
-              var $section = $('#focal');
-              var $panzoom = $section.find('.panzoom').panzoom();
-              $panzoom.parent().on('mousewheel.focal', function( e ) {
-                e.preventDefault();
-                var delta = e.delta || e.originalEvent.wheelDelta;
-                var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
-                $panzoom.panzoom('zoom', zoomOut, {
-                  animate: false,
-                  focal: e
-                });
-              });
-            })();
-         </script>
       </section>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
       <script src="https://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.5/dropdown.min.js"></script>
       <script src="drawer.min.js" charset="utf-8"></script>
-      <script>
-         $(document).ready(function() {
-           $('.drawer').drawer();
-         });
-      </script>
    </body>
 </html>
