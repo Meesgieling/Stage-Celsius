@@ -11,7 +11,6 @@
       <link href="popup.css" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
-      <script src="vendor/highlightjs/highlight.pack.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="swipe.js"></script>
       <script src="panzoom.js"></script>
@@ -20,9 +19,6 @@
       <script src="jquery.mousewheel.js"></script>
 	  <script src="scripts.js"></script>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <style type="text/css">
-         section { text-align: center; margin: 50px 0; }
-      </style>
    </head>
    <body class="drawer drawer--left">
       <h1>Demo page for plugins</h1>
@@ -56,21 +52,21 @@
                   <li><a class="drawer-dropdown-menu-item" href="#focal">Zoom with mousewheel</a></li>
                </ul>
             </li>
-            <footer>
-               <a href="https://github.com/Meesgieling/Meesgieling.github.io" target="_blank" style="position:relative;color:darkred;">Github link</a>
-            </footer>
-         </ul>
+			<footer>
+               <a href="https://github.com/Meesgieling/Meesgieling.github.io"  id="foot" target="_blank">Github link</a>
+			</footer>
+		 </ul>
       </nav>
       </header>
       <section id="zoom">
-         <div style="max-width:300px; position:relative; margin:auto;">
+         <div id="tooltipdiv">
             <div class="help-tip">
                <p>These images can be swiped left and right and can be zoomed in and out.</p>
             </div>
             <h3>Zoom and Swipe</h3>
          </div>
          <div>
-            <div id="mySwipe" class="swipe" style="width:630px; margin:auto;">
+            <div id="mySwipe" class="swipe">
                <div class="swipe-wrap">
                   <div><img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900"></div>
                   <div><img src="http://www.w3schools.com/css/img_fjords.jpg" width="900" height="900"></div>
@@ -88,11 +84,10 @@
                <a class="btn btn-primary" id="prev">Prev</a>
                <a class="btn btn-primary" id="next">Next</a>
             </div>
-            <a href="#" id="pop-up" class="default_popup btn btn-primary" style="text-decoration: none;">Pop-up</a>
+            <a href="#" id="pop-up" class="default_popup btn btn-primary">Pop-up</a>
          </div>
       </section>
-      <main>
-         <div style="max-width:300px; position:relative; margin:auto;">
+         <div id="tooltipdiv">
             <div class="help-tip">
                <p>These images can be swiped left and right.</p>
             </div>
@@ -117,9 +112,8 @@
                </div>
             </div>
          </section>
-      </main>
       <section id="focal">
-         <div style="max-width:300px; position:relative; margin:auto;">
+         <div id="tooltipdiv">
             <div class="help-tip">
                <p>This image can be zoomed in and out with touch or with using the mousewheel.</p>
             </div>

@@ -3,7 +3,10 @@
   overflow: hidden;
   visibility: hidden;
   position: relative; }
-
+#mySwipe{
+	width:630px; 
+	margin:auto;
+}
 .swipe-wrap {
   overflow: hidden;
   position: relative; }
@@ -25,7 +28,23 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, 
   font-size: 100%;
   vertical-align: baseline;
   background-color: #e6f7ff; }
-
+  
+section{
+	margin:50px;
+}
+footer{
+	position:relative;
+	bottom:0;
+}
+a{
+	color:darkred;
+	text-decoration:none;
+}
+#tooltipdiv{
+	max-width:300px; 
+	position:relative; 
+	margin:auto;
+}
 article > section > * + * {
   margin: 1.5em 0; }
 
@@ -126,12 +145,6 @@ header, footer {
 body {
   background-color: #ffffff;
   color: #111; }
-
-a {
-  color: white;
-  text-align:center;  
-}
-
 .btn-primary {
   background-color: #27AAE1;
   color: #eee; }
@@ -174,54 +187,6 @@ img{
 .drawer-navbar{
 	padding-top:0px;
 }
-/*
-input[type=range] {
-  -webkit-appearance: none;
-  width: 20%; 
-  background: transparent; 
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none;
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border-radius: 3px;
-  background: #27AAE1;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-input[type=range]::-moz-range-thumb {
-  border-radius: 3px;
-  background: #27AAE1;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-input[type=range]::-ms-thumb {
-  border-radius: 3px;
-  background: #27AAE1;
-  cursor: pointer;
-  border-radius: 50%;
-}
-input[type=range]::-ms-track {
-	border-width: 1px;
-	border-color: #222;
-}*/
 .parent{
 	height:700px;
 }
