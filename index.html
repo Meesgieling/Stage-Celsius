@@ -1,132 +1,132 @@
 <!doctype html>
 <html>
-   <head>
-      <title>Plugin demo page</title>
-      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-      <link href="style.css" rel="stylesheet"/>
-      <link href="style-tooltip.css" rel="stylesheet"/>
-      <link href="sandbox.css" rel="stylesheet">
-      <link href="drawer.css" rel="stylesheet">
-      <link href="popup.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script src="swipe.js"></script>
-      <script src="panzoom.js"></script>
-      <script src="jquery.popup.min.js"></script>
-      <script src="jquery.panzoom.js"></script>
-      <script src="jquery.mousewheel.js"></script>
-	  <script src="scripts.js"></script>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-   </head>
-   <body class="drawer drawer--left">
-      <h1>Demo page for plugins</h1>
-      <button type="button" class="drawer-toggle drawer-hamburger">
-      <span class="sr-only">toggle navigation</span>
-      <span class="drawer-hamburger-icon"></span>
-      </button>
-      <nav class="drawer-nav" role="navigation">
-         <ul class="drawer-menu">
-            <li><a class="drawer-brand">Navigation menu</a></li>
-            <li><a class="drawer-menu-item" href="#zoom">Zoom and Swipe</a></li>
-            <li><a class="drawer-menu-item" href="#demo">Swipe</a></li>
-            <li><a class="drawer-menu-item" href="#focal">Zoom with mousewheel</a></li>
-            <li class="drawer-dropdown">
-               <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-               Dropdown <span class="drawer-caret"></span>
-               </a>
-               <ul class="drawer-dropdown-menu">
-                  <li><a class="drawer-dropdown-menu-item" href="#zoom">Zoom and Swipe</a></li>
-                  <li><a class="drawer-dropdown-menu-item" href="#demo">Swipe</a></li>
-                  <li><a class="drawer-dropdown-menu-item" href="#focal">Zoom with mousewheel</a></li>
-               </ul>
-            </li>
-            <li class="drawer-dropdown">
-               <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
-               Dropdown 2 <span class="drawer-caret"></span>
-               </a>
-               <ul class="drawer-dropdown-menu">
-                  <li><a class="drawer-dropdown-menu-item" href="#zoom">Zoom and Swipe</a></li>
-                  <li><a class="drawer-dropdown-menu-item" href="#demo">Swipe</a></li>
-                  <li><a class="drawer-dropdown-menu-item" href="#focal">Zoom with mousewheel</a></li>
-               </ul>
-            </li>
-			<footer>
-               <a href="https://github.com/Meesgieling/Meesgieling.github.io"  id="foot" target="_blank">Github link</a>
-			</footer>
-		 </ul>
-      </nav>
-      </header>
-      <section id="zoom">
-         <div id="tooltipdiv">
-            <div class="help-tip">
-               <p>These images can be swiped left and right and can be zoomed in and out.</p>
-            </div>
-            <h3>Zoom and Swipe</h3>
-         </div>
-         <div>
-            <div id="mySwipe" class="swipe">
-               <div class="swipe-wrap">
-                  <div><img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900"></div>
-                  <div><img src="http://www.w3schools.com/css/img_fjords.jpg" width="900" height="900"></div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section id="buttons">
-         <div class="buttons">
-            <a class="btn btn-primary" id="zoom-out">Zoom Out</a>
-            <a class="btn btn-primary" id="zoom-in">Zoom In</a>
-            <input type="range" class="zoom-range" id="zoom-range">
-            <a class="btn btn-primary" id="reset">Reset</a>
-            <div class="demo-controls">
-               <a class="btn btn-primary" id="prev">Prev</a>
-               <a class="btn btn-primary" id="next">Next</a>
-            </div>
-            <a href="#" id="pop-up" class="default_popup btn btn-primary">Pop-up</a>
-         </div>
-      </section>
-         <div id="tooltipdiv">
-            <div class="help-tip">
-               <p>These images can be swiped left and right.</p>
-            </div>
-            <h3>Swipe</h3>
-         </div>
-         <article class="container">
-         <section id="demo">
-            <div id="swipe" class="swipe">
-               <div class="swipe-wrap">
-                  <div><img src="https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/leisa_christmas_false_color.png?itok=Jxf0IlS4"/></div>
-                  <div><img src="http://www.w3schools.com/css/img_fjords.jpg"/></div>
-                  <div><img src="http://i.dailymail.co.uk/i/pix/2016/03/08/22/006F877400000258-3482989-image-a-10_1457476109735.jpg"/></div>
-                  <div><img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg"/></div>
-                  <div>
-                     <p id="slidertext">tekst</p>
-                  </div>
-                  <div><b>5</b></div>
-               </div>
-               <div class="demo-controls">
-                  <a class="btn btn-primary" id="previous">Prev</a>
-                  <a class="btn btn-primary" id="next1">Next</a>
-               </div>
-            </div>
-         </section>
-      <section id="focal">
-         <div id="tooltipdiv">
-            <div class="help-tip">
-               <p>This image can be zoomed in and out with touch or with using the mousewheel.</p>
-            </div>
-            <h3>Zoom with mousewheel</h3>
-         </div>
-         <div class="parent">
-            <div class="panzoom">
-               <img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900">
-            </div>
-         </div>
-      </section>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
-      <script src="https://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.5/dropdown.min.js"></script>
-      <script src="drawer.min.js" charset="utf-8"></script>
-   </body>
+<head>
+  <title>Plugin demo page</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="style-tooltip.css" rel="stylesheet"/>
+  <link href="sandbox.css" rel="stylesheet">
+  <link href="drawer.css" rel="stylesheet">
+  <link href="popup.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="swipe.js"></script>
+  <script src="panzoom.js"></script>
+  <script src="jquery.popup.min.js"></script>
+  <script src="jquery.panzoom.js"></script>
+  <script src="jquery.mousewheel.js"></script>
+  <script src="scripts.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body class="drawer drawer--left">
+  <h1>Demo page for plugins</h1>
+  <button type="button" class="drawer-toggle drawer-hamburger">
+    <span class="sr-only">toggle navigation</span>
+    <span class="drawer-hamburger-icon"></span>
+  </button>
+  <nav class="drawer-nav" role="navigation">
+    <ul class="drawer-menu">
+      <li><a class="drawer-brand">Navigation menu</a></li>
+      <li><a class="drawer-menu-item" href="#zoom">Zoom and Swipe</a></li>
+      <li><a class="drawer-menu-item" href="#demo">Swipe</a></li>
+      <li><a class="drawer-menu-item" href="#focal">Zoom with mousewheel</a></li>
+      <li class="drawer-dropdown">
+        <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+          Dropdown <span class="drawer-caret"></span>
+        </a>
+        <ul class="drawer-dropdown-menu">
+          <li><a class="drawer-dropdown-menu-item" href="#zoom">Zoom and Swipe</a></li>
+          <li><a class="drawer-dropdown-menu-item" href="#demo">Swipe</a></li>
+          <li><a class="drawer-dropdown-menu-item" href="#focal">Zoom with mousewheel</a></li>
+        </ul>
+      </li>
+      <li class="drawer-dropdown">
+        <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+          Dropdown 2 <span class="drawer-caret"></span>
+        </a>
+        <ul class="drawer-dropdown-menu">
+          <li><a class="drawer-dropdown-menu-item" href="#zoom">Zoom and Swipe</a></li>
+          <li><a class="drawer-dropdown-menu-item" href="#demo">Swipe</a></li>
+          <li><a class="drawer-dropdown-menu-item" href="#focal">Zoom with mousewheel</a></li>
+        </ul>
+      </li>
+      <footer>
+        <a href="https://github.com/Meesgieling/Meesgieling.github.io"  id="foot" target="_blank">Github link</a>
+      </footer>
+    </ul>
+  </nav>
+</header>
+<section id="zoom">
+  <div id="tooltipdiv">
+    <div class="help-tip">
+      <p>These images can be swiped left and right and can be zoomed in and out.</p>
+    </div>
+    <h3>Zoom and Swipe</h3>
+  </div>
+  <div>
+    <div id="mySwipe" class="swipe">
+      <div class="swipe-wrap">
+        <div><img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900"></div>
+        <div><img src="http://www.w3schools.com/css/img_fjords.jpg" width="900" height="900"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="buttons">
+  <div class="buttons">
+    <a class="btn btn-primary" id="zoom-out">Zoom Out</a>
+    <a class="btn btn-primary" id="zoom-in">Zoom In</a>
+    <input type="range" class="zoom-range" id="zoom-range">
+    <a class="btn btn-primary" id="reset">Reset</a>
+    <div class="demo-controls">
+      <a class="btn btn-primary" id="prev">Prev</a>
+      <a class="btn btn-primary" id="next">Next</a>
+    </div>
+    <a href="#" id="pop-up" class="default_popup btn btn-primary">Pop-up</a>
+  </div>
+</section>
+<div id="tooltipdiv">
+  <div class="help-tip">
+    <p>These images can be swiped left and right.</p>
+  </div>
+  <h3>Swipe</h3>
+</div>
+<article class="container">
+  <section id="demo">
+    <div id="swipe" class="swipe">
+      <div class="swipe-wrap">
+        <div><img src="https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/leisa_christmas_false_color.png?itok=Jxf0IlS4"/></div>
+        <div><img src="http://www.w3schools.com/css/img_fjords.jpg"/></div>
+        <div><img src="http://i.dailymail.co.uk/i/pix/2016/03/08/22/006F877400000258-3482989-image-a-10_1457476109735.jpg"/></div>
+        <div><img src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg"/></div>
+        <div>
+          <p id="slidertext">tekst</p>
+        </div>
+        <div><b>5</b></div>
+      </div>
+      <div class="demo-controls">
+        <a class="btn btn-primary" id="previous">Prev</a>
+        <a class="btn btn-primary" id="next1">Next</a>
+      </div>
+    </div>
+  </section>
+  <section id="focal">
+    <div id="tooltipdiv">
+      <div class="help-tip">
+        <p>This image can be zoomed in and out with touch or with using the mousewheel.</p>
+      </div>
+      <h3>Zoom with mousewheel</h3>
+    </div>
+    <div class="parent">
+      <div class="panzoom">
+        <img src="http://blog.millermedeiros.com/wp-content/uploads/2010/04/awesome_tiger.svg" width="900" height="900">
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+  <script src="https://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.5/dropdown.min.js"></script>
+  <script src="drawer.min.js" charset="utf-8"></script>
+</body>
 </html>
