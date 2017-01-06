@@ -1,48 +1,84 @@
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+.button {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border: solid 1px #000;
+    border-radius: 50%;
+		display:block;
+		margin: 10px;
+}
+.w3-row{
+	margin: 10px;
+}
+span{
+	position: relative;;
+	top: -50px;
+	left: 110px;
+	font-family: "Lucida Grande", sans-serif;
+	font-size: 20px;
+}
 body{
-	background-color: #ccf0ff;
+	background-image: url(Achtergrond.JPG);
 }
-#installatie{
-	background-color: green;
+#luchtkast{
+	width: auto;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
-#alarmen{
-	background-color: red;
+img{
+	width: 90px;
+	height: 90px;
 }
-#trend{
-	background-color: blue;
+.button{
+	-moz-box-shadow: 3px 4px 0px 0px #899599;
+	-webkit-box-shadow: 3px 4px 0px 0px #899599;
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+	background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	border:1px solid #d6bcd6;
+	cursor:pointer;
+	color:black;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+	}
+	.button:hover{
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+			background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+			background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+			background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+			background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+			background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
 }
-#systeem{
-	background-color: #e6e600;
+.button:active{
+	position:relative;
+	top:1px;
 }
-#documentatie{
-	background-color: purple;
-}
-#back{
-	background-color: #000099;
-}
-.button_2{
-	background-color: #00008b;
-}
-.button_1, .button_2{
-	margin: 4px 2px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-	cursor: pointer;
-	font-size: 25px;
-	border-radius: 7%;
-	font-family:Tahoma;
-}
-@media screen and (min-width: 1024px){
-.button_1, .button_2{
-	height:300px;
-	width:25%;
-}
-}
-@media screen and (max-device-width: 640px){
-.button_1, .button_2{
-	height:100px;
-	width:100%;
-}
+button {
+	 cursor: pointer;
 }

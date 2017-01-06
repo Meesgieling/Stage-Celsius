@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <title>Warmte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="desktop.css"/>
+    <script src="swipe.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="w3.css">
+</head>
+<body>
+  <div id="swipe" style='margin:0 auto' class="swipe">
+    <div class="swipe-wrap">
+      <div class="page">
+        <img id ="luchtkast" src="warmteopwekking.png" width="100%" height="100%"/>
+    </div>
+    <div class="page">
+      <img id ="luchtkast" src="radiatoren noord.png" width="100%" height="100%"/>
+    </div>
+    <div class="page">
+      <img id ="luchtkast" src="radiatoren zuid.png" width="100%" height="100%"/>
+    </div>
+    <div class="page">
+      <img id ="luchtkast" src="radiatoren oost.png" width="100%" height="100%"/>
+    </div>
+  </div>
+</div>
+<div id="left-arrow"
+   style="font-size: 50px; position: absolute; left: 0%; top: 50%; z-index: 1000;"
+   onclick="javascript:window.mySwipe.prev();">
+&lt;
+</div>
+<div id="right-arrow"
+   style="font-size: 50px; position: absolute; right: 0%; top: 50%; z-index: 1000;"
+   onclick="javascript:window.mySwipe.next();">
+&gt;
+</div>
+  <script>
+  var element = document.getElementById('swipe');
+
+  window.mySwipe = new Swipe(element, {
+    startSlide: 0,
+    auto: 0,
+    draggable: true,
+    autoRestart: false,
+    continuous: true,
+    disableScroll: true,
+    stopPropagation: true,
+    callback: function(index, element) {},
+    transitionEnd: function(index, element) {}
+  });
+  </script>
+  <button style="display: block; margin-right: auto; margin-left: auto; font-size:20px;" class="button" onclick="location.href='menu.html'">Back</button>
+</body>
+</html>

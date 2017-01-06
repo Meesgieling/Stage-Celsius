@@ -9,27 +9,15 @@
 </head>
 <body>
 	<div class="w3-row">
-		<button id="installatie" class="button_1" type="button">Installatie</button>
-		<button id="alarmen" class="button_1" type="button">Alarmen</button>
-		<button id="trend" class="button_1" type="button">Trend</button>
-		<button id="systeem" class="button_1" type="button">Systeem</button>
-		<button id="documentatie" class="button_1" type="button">Documentatie</button>
-
-		<button id="wko" class="button_2" type="button" style="display: none">WKO</button>
-		<button id="warmte" class="button_2" type="button" style="display: none">Warmte</button>
-		<button id="lucht" class="button_2" type="button" style="display: none" onclick="location.href='lucht.html'">Lucht</button>
-		<button id="signaleringen" class="button_2" type="button" style="display: none">Algemene signaleringen</button>
-	</div>
-	<script src="jquery.backstretch.min.js"></script>
-	<script>
-	$.backstretch(["https://static1.squarespace.com/static/524d09ece4b05018590c5c59/t/5260e196e4b055fef802e254/1382080921506/sea-sanctuaries-siteimage01.jpg",
-	"https://i.ytimg.com/vi/QX4j_zHAlw8/maxresdefault.jpg",
-	"http://miriadna.com/desctopwalls/images/max/Emerald-sea-and-white-beach.jpg"
-],{
-	fade:1000,
-	duration: 3000
-});
-</script>
+		<button id="installatie" class="button" type="button"><img src="https://cdn0.iconfinder.com/data/icons/cosmo-navigation/40/pump_2-512.png"/><span>Installatie</span></button>
+		<button id="alarmen" class="button" type="button"><img src="http://www.freeiconspng.com/uploads/alarm-bell-icon-4.png"/><span>Alarmen</span></button>
+		<button id="trend" class="button" type="button"><img src="http://www.freeiconspng.com/uploads/growth-icon-15.png"/><span>Trend</span></button>
+		<button id="systeem" class="button" type="button"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/122748-200.png"/><span>Systeem</span></button>
+		<button id="documentatie" class="button" type="button"><img src="http://www.free-icons-download.net/images/page-icon-73982.png"><span>Documentatie</span></button>
+		<button id="koude" class="button" type="button" style="display: none"><img src="koude.png"/><span>Kou</span></button>
+		<button id="warmte" class="button" type="button" style="display: none" onclick="location.href='warmte.html'"><img src="warmte.png"/><span>Warmte</span></button>
+		<button id="lucht" class="button" type="button" style="display: none" onclick="location.href='lucht.html'"><img src="lucht.png"/><span>Lucht</span></button>
+</div>
 <script>
 $("#installatie").click(function() {
 	$("#alarmen").toggle();
@@ -38,7 +26,7 @@ $("#installatie").click(function() {
 	$("#documentatie").toggle();
 });
 $("#installatie").click(function() {
-	$("#wko").toggle();
+	$("#koude").toggle();
 	$("#warmte").toggle();
 	$("#lucht").toggle();
 	$("#signaleringen").toggle();
